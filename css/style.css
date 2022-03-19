@@ -1,0 +1,234 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+
+:root{
+    --main-color: #fa9805 !important;
+    --black : #244361 !important;
+    --box-shadow : 0 5px 10px rgba(0,0,0,.1);
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none !important;
+    font-family: 'Roboto', sans-serif;
+}
+
+html{
+    scroll-padding-top: 60px;
+}
+
+
+
+.link-btn{
+    display: inline-block;
+    background: var(--main-color) !important;
+    color: #fff !important;
+    padding: 5px 25px;
+    font-size: 17px;
+    cursor: pointer;
+    border-radius: 50px;
+    box-shadow: var(--box-shadow);
+}
+.link-btn:hover{
+    color: #fff !important;
+    background: var(--black) !important;
+}
+section {
+    padding: 20px 0 !important;
+
+}
+
+section:nth-child(odd){
+    background-color: #f8f8fe !important;
+}
+
+header{
+    box-shadow: var(--box-shadow);
+    background: #fff !important;
+}
+
+header .logo{
+    font-size: 20px;
+    color: var(--black);
+}
+
+header .logo span{
+    color: var(--main-color);
+}
+
+header .nav a{
+    margin-left: 3px;
+    border-radius: 50px;
+    color:var(--black);
+    padding: 5px 15px;
+}
+header .nav a.active,
+header .nav a:hover{
+    background: var(--main-color) !important;
+    box-shadow: var(--box-shadow) !important;
+    color: #fff !important;
+}
+
+#menu-bar{
+    color: var(--black);
+    cursor: pointer;
+    font-size: 25px;
+    transition: .2s linear;
+}
+
+
+.home{
+    min-height: 100vh;
+    background: url(../images/home-bg.png) no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+
+.home .content span{
+    color: var(--main-color) !important;
+    font-size: 20px;
+}
+
+.home .content h3{
+    color: var(--black) !important;
+    font-size: 50px;
+    font-weight: 700;
+}
+
+/* About section class */
+.about .content h3{
+    color: var(--black);
+    font-size: 33px;
+}
+.about .content p.about-corona{
+    color: #777 !important;
+    font-size: 14px;
+}
+
+/* prevent section class */
+.heading {
+    text-align: center;
+    padding-bottom: 5px;
+    color: var(--black) !important;
+    font-size: 30px;
+}
+
+.heading span{
+    color: var(--main-color);
+}
+
+.prevent .box{
+    flex: 1 1 300px;
+    background: #f8f8fe !important;
+    border-radius: 5px;
+    text-align: center;
+}
+
+.prevent .box img{
+    margin-bottom: 10px;
+    height: 70px;
+}
+
+.prevent .box h3{
+    color: var(--black);
+    font-size: 20px;
+}
+
+.prevent .box h3{
+    color: var(--black);
+    font-size: 14px;
+}
+
+
+/* experts section page */
+
+.experts .box{
+    width: 260px;
+    background: #fff !important;
+    box-shadow: var(--box-shadow);
+    margin: 5px;
+    padding: 15px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.experts .box img{
+    background: #f8f8fe;
+    border-radius: 5px;
+    width: 100%;
+    margin-bottom: 8px;
+}
+
+.experts .box h3{
+    font-size: 22px;
+    margin: 2px 0;
+    color: var(--black) !important;
+}
+
+.experts .box span{
+    font-size: 15px;
+    color: var(--main-color);
+}
+
+.experts .box .share{
+    position: absolute;
+    top: 5px;
+    right: -50px;
+    transition: .2s;
+}
+.experts .box:hover .share{
+    right: 15px;
+}
+
+.experts .box .share a{
+    border-radius: 5px;
+    background: var(--main-color);
+    color: #fff !important;
+    display: block;
+    height: 40px;
+    width: 40px;
+    line-height: 40px;
+    margin-top: 5px;
+}
+
+.experts .box .share a:hover{
+    background: var(--black) !important;
+}
+
+/* media queries */
+
+@media (max-width: 768px){
+    header .nav{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: #fff !important;
+        border-top: 1px solid rgba(0,0,0,.1);
+        border-bottom: 1px solid rgba(0,0,0,.1);
+        transition: .2s linear;
+        clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+    header .nav.active{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
+    }
+    header .nav a {
+        display: block;
+        width: 100%;
+        margin-top: 10px;
+    }
+    .fa-times{
+        transform: rotate(180deg);
+    }
+}
+
+
+@media (max-width: 991px){
+    .home .content h3{
+        font-size: 30px;
+    }
+}
